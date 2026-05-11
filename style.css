@@ -1,0 +1,146 @@
+/* Variáveis do modo light (padrão) */
+:root {
+    --cor-fundo: #f0f0f0;
+    --cor-texto: #222;
+    --cor-caixa: #fff;
+    --cor-destaque: #005fcc;
+    --cor-borda: #ccc;
+}
+
+/* Variáveis pro modo escuro (ativa pelo JS) */
+body.dark {
+    --cor-fundo: #121212;
+    --cor-texto: #eee;
+    --cor-caixa: #1e1e1e;
+    --cor-destaque: #4da3ff;
+    --cor-borda: #333;
+}
+
+/* Reset básico pra limpar margens esquisitas do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pegada meio código/terminal */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Menu no topo */
+.menu-topo {
+    background-color: var(--cor-caixa);
+    border-bottom: 2px solid var(--cor-destaque);
+    padding: 15px;
+    position: fixed; /* Prende o menu em cima */
+    width: 100%;
+    top: 0;
+}
+
+.menu-topo ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.menu-topo a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-topo a:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
+#btn-tema {
+    background: none;
+    border: 1px solid var(--cor-texto);
+    color: var(--cor-texto);
+    cursor: pointer;
+    padding: 2px 8px;
+    font-family: inherit;
+}
+
+#btn-tema:hover {
+    background: var(--cor-texto);
+    color: var(--cor-fundo);
+}
+
+/* Container de conteudo */
+.caixa-principal {
+    max-width: 750px;
+    margin: 100px auto 40px auto; /* 100px em cima por causa do menu fixo */
+    padding: 20px;
+    background-color: var(--cor-caixa);
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Formatação das listas e projetos */
+.item-lista, .card-projeto {
+    border-left: 4px solid var(--cor-destaque);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 15px;
+}
+
+.card-projeto a {
+    color: var(--cor-destaque);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Formulario */
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input, .campo textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+    font-family: inherit;
+}
+
+#btn-enviar {
+    background-color: var(--cor-destaque);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+#btn-enviar:hover {
+    opacity: 0.8;
+}
